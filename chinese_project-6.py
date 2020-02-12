@@ -169,14 +169,17 @@ def main(str_get_input):
         elif get_input[0] == "如果":
             ifelse(str_get_input)
         else :
-            if get_input[1] == "增加":
-                add(get_input[0],get_input[2])
-            elif get_input[1] == "减少":
-                subtract(get_input[0],get_input[2])
-            elif get_input[1] == "乘以":
-                multiplication(get_input[0],get_input[2])
-            elif get_input[1] == "除以":
-                division(get_input[0],get_input[2])
+            if len(get_input)==2 :
+                if get_input[1] == "增加":
+                    add(get_input[0],get_input[2])
+                elif get_input[1] == "减少":
+                    subtract(get_input[0],get_input[2])
+                elif get_input[1] == "乘以":
+                    multiplication(get_input[0],get_input[2])
+                elif get_input[1] == "除以":
+                    division(get_input[0],get_input[2])
+                else :
+                    print("输入不符合规则")
             else :
                 print("输入不符合规则")
 while True :
